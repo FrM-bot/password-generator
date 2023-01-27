@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@font-face {
+  font-family: Quicksand;
+  src: url("./assets/Quicksand.otf");
+  font-style: normal;
+  font-weight: normal;
+  font-display: fallback;
+}
+:root {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+@layer base {
+  :root {
+    --primary: 100 108 255;
+    --secondary: 26 26 26;
+    --tertiary: 30 32 35;
+    --text-color: 255 255 255;
+  }
+  html {
+    padding: 0;
+    margin: 0;
+    font-family: Quicksand, sans-serif;
+    scroll-behavior: smooth;
+  }
+}
+
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+input[type=number] { appearance: textfield; }
+input[type=color] { appearance: textfield; }
+
+input[type="range"] {
+  -webkit-appearance: none;
+  margin-right: 15px;
+  height: 5px;
+  background: rgb(var(--text-color));
+  background-size: 70% 100%;
+  background-repeat: no-repeat;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 15px;
+  width: 15px;
+  /* border-radius: 4px; */
+  background: rgb(var(--primary));
+  cursor: ew-resize;
+  box-shadow: 0 0 2px 0 #555;
+  transition: background .3s ease-in-out;
+}
+
+input[type=range]::-webkit-slider-runnable-track  {
+  -webkit-appearance: none;
+  box-shadow: none;
+  border: none;
+  background: transparent;
+}
+
+/* ------------------------------- */
+input[type=checkbox]{
+  appearance: none;
+}
