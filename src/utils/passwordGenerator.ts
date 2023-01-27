@@ -3,11 +3,9 @@ export const generatePassword = (config: {
   uppercase: string
   numbers: string
   symbols: string
-  beginWithLetter: string
   length: string
-  repeat: string
 }) => {
-  const charactersTypes = {
+  const charactersTypes: any = {
     lowercase: [
       "a",
       "b",
@@ -87,12 +85,12 @@ export const generatePassword = (config: {
       "/",
       "?",
     ],
-    beginWithLetter: true,
   }
+
   let password: string[] = []
 
   for (const key in config) {
-    if (charactersTypes[key]) {
+    if (key !== 'length') {
       for (let index = 0; index < 7; index++) {
         password = password.concat(charactersTypes[key])
       }
