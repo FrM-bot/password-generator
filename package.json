@@ -13,7 +13,8 @@
     "e2e": "playwright test",
     "e2e-report": "npx playwright show-report",
     "e2e-trace": "npx playwright test --trace on",
-    "e2e-codegen": "npx playwright codegen http://localhost:5173"
+    "e2e-codegen": "npx playwright codegen http://localhost:5173",
+    "eslint": "eslint --ext .ts,.tsx,.js,.jsx . --fix"
   },
   "dependencies": {
     "react": "^18.2.0",
@@ -21,15 +22,24 @@
   },
   "devDependencies": {
     "@playwright/test": "1.30.0",
-    "@types/react": "^18.0.26",
-    "@types/react-dom": "^18.0.9",
-    "@vitejs/plugin-react-swc": "^3.0.0",
+    "@types/node": "18.11.18",
+    "@types/react": "18.0.26",
+    "@types/react-dom": "18.0.9",
+    "@typescript-eslint/eslint-plugin": "5.50.0",
+    "@typescript-eslint/parser": "5.35.1",
+    "@vitejs/plugin-react-swc": "3.0.0",
     "@vitest/ui": "0.28.3",
     "autoprefixer": "10.4.13",
+    "eslint": "8.33.0",
+    "eslint-config-standard-with-typescript": "34.0.0",
+    "eslint-plugin-import": "2.27.5",
+    "eslint-plugin-n": "15.6.1",
+    "eslint-plugin-promise": "6.1.1",
+    "eslint-plugin-react": "7.32.2",
     "postcss": "8.4.21",
     "tailwindcss": "3.2.4",
-    "typescript": "^4.9.3",
-    "vite": "^4.0.0",
+    "typescript": "4.9.5",
+    "vite": "4.0.0",
     "vitest": "0.28.3"
   }
 }

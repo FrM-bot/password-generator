@@ -1,13 +1,12 @@
 import charactersTypesJson from '../../characters.json'
 
-
 export const generatePassword = (config: {
   lowercase?: string
   uppercase?: string
   numbers?: string
   symbols?: string
   length: string
-}) => {
+}): string => {
   const charactersTypes: any = charactersTypesJson
   let password: string[] = []
 
@@ -23,6 +22,6 @@ export const generatePassword = (config: {
 
   return password
     .sort(() => Math.random() - 0.5)
-    .join("")
+    .join('')
     .slice(0, Number(config.length))
 }
