@@ -23,7 +23,7 @@ const Input = ({ labeltext, props, refInput }: Props): JSX.Element => {
   return (
     <label htmlFor={props?.name} className={'after:absolute w-full after:bg-gradient-to-l after:from-primary after:to-transparent after:w-full after:rounded-sm after:h-px after:bottom-0 after:left-0 after:scale-x-100 after:duration-300 after:z-[5] relative duration-300'}>
       {
-        labeltext ?? <span className='absolute top-[-50%] left-3 bg-primary py-[0.3em] px-[0.6em]'>{labeltext}</span>
+        Number(labeltext?.length) > 0 && <span className='absolute top-[-50%] left-3 bg-primary py-[0.3em] px-[0.6em]'>{labeltext}</span>
       }
       {/* <span className='absolute top-[-50%] right-3 bg-primary py-[0.3em] px-[0.6em]'>{length}</span> */}
       <input ref={refInput} className={'[letter-spacing:1px;] text-center bg-secondary outline-none p-2 focus:bg-primary focus:text-secondary duration-300 shadow-lg shadow-black/40 focus:-translate-y-1 focus:[letter-spacing:2px;]'}

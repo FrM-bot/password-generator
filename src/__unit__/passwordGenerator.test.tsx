@@ -5,14 +5,15 @@ import characterTypes from '../../characters.json'
 // The two tests marked with concurrent will be run in parallel
 describe('Password generator function.', () => {
   const passwordGenerated = generatePassword({
-    length: '7',
+    length: 10,
     lowercase: 'on',
     uppercase: 'on',
-    numbers: 'on'
+    numbers: 'on',
+    symbols: 'on'
   })
-  it('Debe tener una logitud de 7.', () => {
+  it('Debe tener una logitud de 10.', () => {
     // Test skipped, no error
-    expect(passwordGenerated).to.length(7)
+    expect(passwordGenerated).to.length(10)
   })
   it('Debe contener al menos una letra minúscula.', () => {
     const charactersLower = passwordGenerated.split('').filter((character) => characterTypes.lowercase.includes(character))
@@ -23,16 +24,20 @@ describe('Password generator function.', () => {
     expect(charactersUpper.length).toBeGreaterThanOrEqual(1)
   })
   it('Debe contener al menos un número.', () => {
-    const charactersUpper = passwordGenerated.split('').filter((character) => characterTypes.uppercase.includes(character))
+    const charactersUpper = passwordGenerated.split('').filter((character) => characterTypes.numbers.includes(character))
+    expect(charactersUpper.length).toBeGreaterThanOrEqual(1)
+  })
+
+  it('Debe contener al menos un símbolo.', () => {
+    const charactersUpper = passwordGenerated.split('').filter((character) => characterTypes.symbols.includes(character))
     expect(charactersUpper.length).toBeGreaterThanOrEqual(1)
   })
 
   const passwordGeneratedV2 = generatePassword({
-    length: '7'
+    length: 7
   })
 
   it('No debe contener caracteres.', () => {
-    // const charactersUpper = passwordGenerated.split('').filter((character) => characterTypes.uppercase.includes(character))
     expect(passwordGeneratedV2).to.length(0)
   })
 })

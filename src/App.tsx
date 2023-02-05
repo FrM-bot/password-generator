@@ -13,7 +13,7 @@ function App (): JSX.Element {
 
   const onSubmit = (config: any): void => {
     if (refPasswordGenerated.current != null) {
-      refPasswordGenerated.current.value = generatePassword(config)
+      refPasswordGenerated.current.value = generatePassword({ numbers: Number(config.numbers), ...config })
     }
   }
 
