@@ -4,6 +4,13 @@ on:
   push:
     branches:
       - main
+  pull_request:
+    branches:
+    - main
+    types:
+      - synchronize
+      - opened
+  
 jobs:
   Deployment-With-GitHub-Actions:
     runs-on: ubuntu-20.04
@@ -12,21 +19,25 @@ jobs:
         with:
           fetch-depth: 0
 
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 7.26.3
+
       - uses: actions/setup-node@v3
         with:
-          cache: 'npm'
           node-version: '18'
+          cache: 'pnpm'
       - name: Install dependecies
-        run: npm ci
+        run: pnpm install --frozen-lockfile
 
       - name: Run Linter
-        run: npm run eslint
+        run: pnpm run eslint
 
       - name: Run unit tests
-        run: npm run test
+        run: pnpm run test
 
       - name: Install playwright browsers
-        run: npx playwright install --with-deps
+        run: pnpx playwright install --with-deps
 
       - name: Run tests e2e
-        run: npm run test:e2e
+        run: pnpm run test:e2e

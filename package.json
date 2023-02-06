@@ -10,10 +10,10 @@
     "test": "vitest",
     "test:ui": "vitest --ui",
     "coverage": "vitest run --coverage",
-    "test:e2e": "npx playwright test",
-    "e2e-report": "npx playwright show-report",
-    "e2e-trace": "npx playwright test --trace on",
-    "e2e-codegen": "npx playwright codegen http://localhost:5173",
+    "test:e2e": "pnpx playwright test",
+    "e2e-report": "pnpx playwright show-report",
+    "e2e-trace": "pnpx playwright test --trace on",
+    "e2e-codegen": "pnpx playwright codegen http://localhost:5173",
     "eslint": "eslint --ext .ts,.tsx,.js,.jsx . --fix"
   },
   "dependencies": {
