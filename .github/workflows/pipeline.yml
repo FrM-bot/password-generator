@@ -3,7 +3,7 @@ run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on: 
   push:
     branches:
-      - main
+      - dev
   pull_request:
     branches:
     - main
@@ -15,6 +15,11 @@ jobs:
   Deployment-With-GitHub-Actions:
     runs-on: ubuntu-20.04
     steps:
+      - name: Cancel Previous Runs
+        uses: styfle/cancel-workflow-action@0.9.1
+        with:
+          access_token: ${{ github.token }}
+
       - uses: actions/checkout@v3
         with:
           fetch-depth: 0
