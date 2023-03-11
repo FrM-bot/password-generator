@@ -1,8 +1,8 @@
 
 const Header = (): JSX.Element => {
   return (
-        <header className="sticky top-5 py-[0.6em] px-[1.2em] bg-[#1a1a1aed] shadow-md flex justify-center">
-            <h1>Password generator</h1>
+        <header className="py-[0.6em] px-[1.2em] flex justify-center mb-4">
+            <h1 className="text-[rgb(84_82_91)] font-bold text-xl">Password Generator</h1>
         </header>
   )
 }

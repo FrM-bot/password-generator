@@ -17,7 +17,7 @@ export const Button: FC<Props> = ({ children, props, variant }) => {
     </button>)
   }
   return (<button
-    className='bg-secondary shadow-lg border border-primary py-[0.3em] px-[0.6em] hover:shadow-lg hover:shadow-primary/50 hover:bg-primary hover:text-secondary duration-300 text-primary'
+    className='shadow-lg border border-primary py-[0.6em] font-medium px-[1.2em] text-custom-dark-3 hover:shadow-lg bg-primary text-secondar hover:bg-custom-dark duration-300 hover:text-primary'
     {...props}
   >
     {children}
