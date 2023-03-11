@@ -33,7 +33,7 @@ function App (): JSX.Element {
   }
 
   return (
-    <div className='w-96 max-w-7xl'>
+    <div className='w-full max-w-md'>
       <Header />
       <main className='w-full'>
         <div className=" shadow-lg flex flex-col gap-3">
