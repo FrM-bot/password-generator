@@ -109,7 +109,7 @@ jobs:
         run: pnpm install --no-frozen-lockfile
 
       - name: Install playwright browsers
-        run: pnpx playwright install
+        run: pnpm dlx playwright install
 
       - uses: actions/download-artifact@v3
         with:
