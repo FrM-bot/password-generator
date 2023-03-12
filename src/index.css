@@ -2,11 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 @font-face {
-  font-family: Quicksand;
-  src: url("./assets/Quicksand-Bold.otf");
-  src: url("./assets/Quicksand-SemiBold.ttf");
-  src: url("./assets/Quicksand-Regular.ttf");
-  src: url("./assets/Quicksand-Medium.ttf");
+  font-family: 'Fira Mono';
+  src: url("./assets/FiraMono-Bold.ttf");
+  src: url("./assets/FiraMono-Medium.ttf");
+  src: url("./assets/FiraMono-Regular.ttf");
 
   font-style: normal;
   /* font-weight: normal, bold, bolder; */
@@ -39,7 +38,7 @@
   html {
     padding: 0;
     margin: 0;
-    font-family: Quicksand, sans-serif;
+    font-family: 'Fira Mono', sans-serif;
     scroll-behavior: smooth;
   }
 }

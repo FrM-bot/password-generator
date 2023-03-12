@@ -50,7 +50,7 @@ function App (): JSX.Element {
                   <span >Character Length</span>
                   <span className='text-primary'>{length}</span>
                 </div>
-                <input onChange={e => { setLength(Number(e.target.value)) }} style={{ backgroundSize: `${length * 100 / 64}% 100%` }} value={length} className='w-full mt-3' name='length' type='range' min={4} max={64} />
+                <input onChange={e => { setLength(Number(e.target.value)) }} style={{ backgroundSize: `${length * 100 / 64 - 1}% 100%` }} value={length} className='w-full mt-3' name='length' type='range' min={4} max={64} />
               </label>
 
               <Input labeltext='Numbers' props={{ type: 'checkbox', defaultChecked: true, name: 'numbers' }} />
